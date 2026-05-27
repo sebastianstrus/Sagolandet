@@ -1,6 +1,6 @@
 //
 //  SettingsStore.swift
-//  Світ Казок
+//  Sagolandet
 //
 
 import Foundation

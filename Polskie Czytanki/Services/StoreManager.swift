@@ -1,6 +1,6 @@
 //
 //  StoreManager.swift
-//  Світ Казок
+//  Sagolandet
 //
 
 import Foundation
@@ -16,7 +16,7 @@ enum StorePurchaseError: Error {
 
 @Observable
 final class StoreManager {
-    static let premiumProductID = "com.sebastianstrus.fairytalesua.premium"
+    static let premiumProductID = "com.sebastianstrus.sagolandet.premium"
     static let freeStoryLimit = 3
 
     private(set) var products: [Product] = []
@@ -73,7 +73,7 @@ final class StoreManager {
             }
         }
         if products.isEmpty && lastError == nil {
-            lastError = "Не вдалося завантажити продукт. Перевір з'єднання і спробуй ще раз."
+            lastError = "Det gick inte att ladda produkten. Kontrollera anslutningen och försök igen."
         }
     }
 
@@ -84,7 +84,7 @@ final class StoreManager {
         }
         guard let product = premiumProduct else {
             if lastError == nil {
-                lastError = "Продукт недоступний. Спробуй ще раз за мить."
+                lastError = "Produkten är inte tillgänglig. Försök igen om en stund."
             }
             return false
         }
@@ -102,7 +102,7 @@ final class StoreManager {
             case .userCancelled:
                 return false
             case .pending:
-                lastError = "Покупка очікує на затвердження."
+                lastError = "Köpet väntar på godkännande."
                 return false
             @unknown default:
                 return false

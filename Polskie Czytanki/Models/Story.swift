@@ -1,6 +1,6 @@
 //
 //  Story.swift
-//  Світ Казок
+//  Sagolandet
 //
 
 import Foundation
@@ -16,9 +16,9 @@ struct Story: Identifiable, Decodable, Hashable {
         return Int(digits) ?? 0
     }
 
-    var smallImageName: String { "ua\(number)" }
+    var smallImageName: String { "sv\(number)" }
     var largeImageName: String { "image_\(number)" }
-    var audioFileName: String { "ua\(number)" }
+    var audioFileName: String { "sv\(number)" }
 }
 
 struct Question: Decodable, Hashable {

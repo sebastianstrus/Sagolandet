@@ -1,6 +1,6 @@
 //
 //  StoryDetailView.swift
-//  Світ Казок
+//  Sagolandet
 //
 
 import SwiftUI
@@ -82,7 +82,7 @@ struct StoryDetailView: View {
         .toolbarBackground(.visible, for: .navigationBar)
         .toolbar {
             ToolbarItem(placement: .principal) {
-                Text("Казка \(story.number)")
+                Text("Saga \(story.number)")
                     .font(.appHeadline)
                     .foregroundStyle(Color.black)
             }
@@ -121,7 +121,7 @@ struct StoryDetailView: View {
                     .contentTransition(.symbolEffect(.replace))
             }
         }
-        .accessibilityLabel(Text(isPlayingThis ? "Призупинити звук" : "Відтворити звук"))
+        .accessibilityLabel(Text(isPlayingThis ? "Pausa ljudet" : "Spela upp ljud"))
     }
 
     private var header: some View {
@@ -176,7 +176,7 @@ struct StoryDetailView: View {
 
     private var actionFooter: some View {
         PrimaryButton(
-            "Перевірити відповіді",
+            "Kontrollera svaren",
             systemImage: "checkmark.seal.fill",
             gradient: AppTheme.primaryGradient
         ) {
@@ -225,14 +225,14 @@ struct StoryDetailView: View {
 #Preview {
     NavigationStack {
         StoryDetailView(story: Story(
-            id: "ua1",
-            title: "Чарівний сад Лілі",
-            text: "Ліля любила проводити час у саду своєї бабусі...",
+            id: "sv1",
+            title: "Lisa och den talande ekorren",
+            text: "Lisa älskade att leka i skogen bakom sitt hus...",
             questions: [
                 Question(
-                    question: "Де Ліля знайшла ключик?",
-                    options: ["Під яблунею", "Під трояндою", "У криниці", "У шафці"],
-                    correctAnswer: "Під трояндою"
+                    question: "Vad heter ekorren?",
+                    options: ["Tass", "Svans", "Nötis", "Skutt"],
+                    correctAnswer: "Nötis"
                 )
             ]
         ))

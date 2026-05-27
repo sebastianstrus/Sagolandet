@@ -1,6 +1,6 @@
 //
 //  ContentView.swift
-//  Світ Казок
+//  Sagolandet
 //
 
 import SwiftUI

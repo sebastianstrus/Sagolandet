@@ -1,6 +1,6 @@
 //
 //  CelebrationOverlay.swift
-//  Світ Казок
+//  Sagolandet
 //
 
 import SwiftUI
@@ -39,10 +39,10 @@ struct CelebrationOverlay: View {
                 }
 
                 VStack(spacing: 8) {
-                    Text("Все правильно!")
+                    Text("Alla rätt!")
                         .font(.system(size: 34, weight: .heavy, design: .rounded))
                         .foregroundStyle(.white)
-                    Text("Чудова робота!")
+                    Text("Bra jobbat!")
                         .font(.appSubtitle)
                         .foregroundStyle(.white.opacity(0.92))
                 }
@@ -52,7 +52,7 @@ struct CelebrationOverlay: View {
                     HapticManager.tap()
                     onDismiss()
                 } label: {
-                    Text("Продовжити")
+                    Text("Fortsätt")
                         .font(.appButton)
                         .foregroundStyle(Color(red: 0.10, green: 0.62, blue: 0.45))
                         .padding(.vertical, 14)

@@ -1,6 +1,6 @@
 //
 //  ShakeEffect.swift
-//  Світ Казок
+//  Sagolandet
 //
 
 import SwiftUI

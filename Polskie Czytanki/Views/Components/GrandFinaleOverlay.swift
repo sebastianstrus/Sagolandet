@@ -1,6 +1,6 @@
 //
 //  GrandFinaleOverlay.swift
-//  Світ Казок
+//  Sagolandet
 //
 
 import SwiftUI
@@ -145,7 +145,7 @@ struct GrandFinaleOverlay: View {
 
     private var textBlock: some View {
         VStack(spacing: 10) {
-            Text("Майстер читання!")
+            Text("Läsmästare!")
                 .font(.system(size: 44, weight: .black, design: .rounded))
                 .foregroundStyle(
                     LinearGradient(
@@ -157,13 +157,13 @@ struct GrandFinaleOverlay: View {
                 .shadow(color: .black.opacity(0.45), radius: 10, y: 4)
                 .multilineTextAlignment(.center)
 
-            Text("Ти завершив усі \(totalStories) казок!")
+            Text("Du har avslutat alla \(totalStories) sagor!")
                 .font(.system(size: 22, weight: .bold, design: .rounded))
                 .foregroundStyle(.white)
                 .shadow(color: .black.opacity(0.5), radius: 6, y: 2)
                 .multilineTextAlignment(.center)
 
-            Text("Ти справжній герой читання.")
+            Text("Du är en sann lässhjälte.")
                 .font(.system(size: 17, weight: .semibold, design: .rounded))
                 .foregroundStyle(.white.opacity(0.95))
                 .shadow(color: .black.opacity(0.4), radius: 4, y: 2)
@@ -204,7 +204,7 @@ struct GrandFinaleOverlay: View {
         } label: {
             HStack(spacing: 10) {
                 Image(systemName: "sparkles")
-                Text("Неймовірно!")
+                Text("Otroligt!")
             }
             .font(.appButton)
             .foregroundStyle(Color(red: 0.96, green: 0.31, blue: 0.51))

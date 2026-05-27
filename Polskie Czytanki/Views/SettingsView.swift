@@ -1,6 +1,6 @@
 //
 //  SettingsView.swift
-//  Світ Казок
+//  Sagolandet
 //
 
 import SwiftUI
@@ -36,7 +36,7 @@ struct SettingsView: View {
                         premiumRow
                     }
 
-                    sectionHeader("Відтворення")
+                    sectionHeader("Uppspelning")
                     SettingsCard {
                         Toggle(isOn: $bindableSettings.showPlayButton) {
                             HStack(spacing: 14) {
@@ -46,10 +46,10 @@ struct SettingsView: View {
                                     .frame(width: 40, height: 40)
                                     .background(AppTheme.primaryGradient, in: RoundedRectangle(cornerRadius: 12, style: .continuous))
                                 VStack(alignment: .leading, spacing: 2) {
-                                    Text("Показати кнопку відтворення")
+                                    Text("Visa uppspelningsknapp")
                                         .font(.appHeadline)
                                         .foregroundStyle(.primary)
-                                    Text("Сховай її, щоб дитина могла читати без звуку.")
+                                    Text("Dölj den så att barnet kan läsa utan ljud.")
                                         .font(.appCaption)
                                         .foregroundStyle(.secondary)
                                         .fixedSize(horizontal: false, vertical: true)
@@ -62,7 +62,7 @@ struct SettingsView: View {
                         }
                     }
 
-                    sectionHeader("Вступ")
+                    sectionHeader("Introduktion")
                     SettingsCard {
                         Button {
                             HapticManager.tap()
@@ -75,10 +75,10 @@ struct SettingsView: View {
                                     .frame(width: 40, height: 40)
                                     .background(AppTheme.secondaryGradient, in: RoundedRectangle(cornerRadius: 12, style: .continuous))
                                 VStack(alignment: .leading, spacing: 2) {
-                                    Text("Показати вступ")
+                                    Text("Visa introduktion")
                                         .font(.appHeadline)
                                         .foregroundStyle(.primary)
-                                    Text("Подивися знову вітальні екрани програми.")
+                                    Text("Se välkomstskärmarna igen.")
                                         .font(.appCaption)
                                         .foregroundStyle(.secondary)
                                         .fixedSize(horizontal: false, vertical: true)
@@ -92,7 +92,7 @@ struct SettingsView: View {
                         .buttonStyle(.plain)
                     }
 
-                    sectionHeader("Прогрес")
+                    sectionHeader("Framsteg")
                     SettingsCard {
                         Button {
                             HapticManager.warning()
@@ -115,10 +115,10 @@ struct SettingsView: View {
                                         in: RoundedRectangle(cornerRadius: 12, style: .continuous)
                                     )
                                 VStack(alignment: .leading, spacing: 2) {
-                                    Text("Скинути прогрес")
+                                    Text("Återställ framsteg")
                                         .font(.appHeadline)
                                         .foregroundStyle(.primary)
-                                    Text("Завершено: \(progress.completedCount)")
+                                    Text("Avslutade: \(progress.completedCount)")
                                         .font(.appCaption)
                                         .foregroundStyle(.secondary)
                                 }
@@ -140,12 +140,12 @@ struct SettingsView: View {
                 .padding(20)
             }
         }
-        .navigationTitle(Text("Налаштування"))
+        .navigationTitle(Text("Inställningar"))
         .navigationBarTitleDisplayMode(.inline)
         .toolbarBackground(Color(red: 1.00, green: 0.95, blue: 0.84), for: .navigationBar)
         .toolbarBackground(.visible, for: .navigationBar)
         .confirmationDialog(
-            Text("Скинути весь прогрес?"),
+            Text("Återställ alla framsteg?"),
             isPresented: $showResetConfirmation,
             titleVisibility: .visible
         ) {
@@ -153,13 +153,13 @@ struct SettingsView: View {
                 HapticManager.success()
                 progress.resetAll()
             } label: {
-                Text("Скинути")
+                Text("Återställ")
             }
             Button(role: .cancel) {} label: {
-                Text("Скасувати")
+                Text("Avbryt")
             }
         } message: {
-            Text("Це очистить завершення усіх 320 казок.")
+            Text("Detta nollställer slutförandet av alla 320 sagor.")
         }
         .fullScreenCover(isPresented: $showOnboarding) {
             OnboardingView {}
@@ -179,10 +179,10 @@ struct SettingsView: View {
                     .frame(width: 40, height: 40)
                     .background(AppTheme.successGradient, in: RoundedRectangle(cornerRadius: 12, style: .continuous))
                 VStack(alignment: .leading, spacing: 2) {
-                    Text("Premium активний")
+                    Text("Premium aktiverad")
                         .font(.appHeadline)
                         .foregroundStyle(.primary)
-                    Text("Ти маєш доступ до всіх 320 казок.")
+                    Text("Du har tillgång till alla 320 sagor.")
                         .font(.appCaption)
                         .foregroundStyle(.secondary)
                         .fixedSize(horizontal: false, vertical: true)
@@ -205,10 +205,10 @@ struct SettingsView: View {
                             .frame(width: 40, height: 40)
                             .background(AppTheme.secondaryGradient, in: RoundedRectangle(cornerRadius: 12, style: .continuous))
                         VStack(alignment: .leading, spacing: 2) {
-                            Text("Активувати Premium")
+                            Text("Aktivera Premium")
                                 .font(.appHeadline)
                                 .foregroundStyle(.primary)
-                            Text("Розблокуй усі казки назавжди.")
+                            Text("Lås upp alla sagor för alltid.")
                                 .font(.appCaption)
                                 .foregroundStyle(.secondary)
                                 .fixedSize(horizontal: false, vertical: true)
@@ -234,10 +234,10 @@ struct SettingsView: View {
                             .frame(width: 40, height: 40)
                             .background(AppTheme.primaryGradient, in: RoundedRectangle(cornerRadius: 12, style: .continuous))
                         VStack(alignment: .leading, spacing: 2) {
-                            Text("Відновити покупку")
+                            Text("Återställ köp")
                                 .font(.appHeadline)
                                 .foregroundStyle(.primary)
-                            Text("Якщо ти вже купив Premium на цьому акаунті.")
+                            Text("Om du redan har köpt Premium med detta konto.")
                                 .font(.appCaption)
                                 .foregroundStyle(.secondary)
                                 .fixedSize(horizontal: false, vertical: true)
@@ -255,7 +255,7 @@ struct SettingsView: View {
 
     private var versionLabel: some View {
         VStack(spacing: 4) {
-            Text("Світ Казок")
+            Text("Sagolandet")
                 .font(.appCaption.weight(.bold))
                 .foregroundStyle(.secondary)
             Text(versionString)
@@ -269,7 +269,7 @@ struct SettingsView: View {
         let info = Bundle.main.infoDictionary
         let version = info?["CFBundleShortVersionString"] as? String ?? "1.0"
         let build = info?["CFBundleVersion"] as? String ?? "1"
-        return "Версія \(version) (\(build))"
+        return "Version \(version) (\(build))"
     }
 
     private func sectionHeader(_ key: LocalizedStringKey) -> some View {

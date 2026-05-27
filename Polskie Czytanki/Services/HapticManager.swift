@@ -1,6 +1,6 @@
 //
 //  HapticManager.swift
-//  Світ Казок
+//  Sagolandet
 //
 
 import UIKit

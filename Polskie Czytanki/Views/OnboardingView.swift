@@ -1,6 +1,6 @@
 //
 //  OnboardingView.swift
-//  Світ Казок
+//  Sagolandet
 //
 
 import SwiftUI
@@ -22,20 +22,20 @@ struct OnboardingView: View {
     private let pages: [OnboardingPage] = [
         OnboardingPage(
             systemImage: "book.pages.fill",
-            title: "Ласкаво просимо до Світу Казок!",
-            subtitle: "Відкрий радість читання разом із дитиною завдяки коротким, кольоровим історіям.",
+            title: "Välkommen till Sagolandet!",
+            subtitle: "Upptäck läsglädjen tillsammans med ditt barn genom korta, färgglada berättelser.",
             gradient: AppTheme.primaryGradient
         ),
         OnboardingPage(
             systemImage: "books.vertical.fill",
-            title: "Обери казку",
-            subtitle: "Переглядай 320 унікальних оповідань і обирай ту, яка тебе зацікавить.",
+            title: "Välj en saga",
+            subtitle: "Bläddra bland 320 unika berättelser och välj den som intresserar dig.",
             gradient: AppTheme.secondaryGradient
         ),
         OnboardingPage(
             systemImage: "speaker.wave.2.fill",
-            title: "Слухай та читай",
-            subtitle: "Послухай запис диктора, а потім спробуй прочитати текст самостійно.",
+            title: "Lyssna och läs",
+            subtitle: "Lyssna på berättarens inspelning och försök sedan läsa texten själv.",
             gradient: LinearGradient(
                 colors: [
                     Color(red: 0.99, green: 0.61, blue: 0.27),
@@ -47,14 +47,14 @@ struct OnboardingView: View {
         ),
         OnboardingPage(
             systemImage: "questionmark.circle.fill",
-            title: "Перевір розуміння",
-            subtitle: "Відповідай на питання після кожної казки та збирай зірки за завершені історії.",
+            title: "Testa förståelsen",
+            subtitle: "Svara på frågor efter varje saga och samla stjärnor för avslutade berättelser.",
             gradient: AppTheme.successGradient
         ),
         OnboardingPage(
             systemImage: "sparkles",
-            title: "Починаємо!",
-            subtitle: "Все готово. Час зануритися у світ казок.",
+            title: "Vi börjar!",
+            subtitle: "Allt är klart. Dags att dyka in i sagornas värld.",
             gradient: LinearGradient(
                 colors: [
                     Color(red: 0.55, green: 0.36, blue: 0.95),
@@ -106,7 +106,7 @@ struct OnboardingView: View {
                     HapticManager.tap()
                     finish()
                 } label: {
-                    Text("Пропустити")
+                    Text("Hoppa över")
                         .font(.appCaption.weight(.bold))
                         .foregroundStyle(.white)
                         .padding(.vertical, 10)
@@ -142,7 +142,7 @@ struct OnboardingView: View {
             }
         } label: {
             HStack(spacing: 12) {
-                Text(currentIndex == pages.count - 1 ? "Починаємо" : "Далі")
+                Text(currentIndex == pages.count - 1 ? "Vi börjar" : "Nästa")
                     .font(.appButton)
                 Image(systemName: currentIndex == pages.count - 1 ? "sparkles" : "arrow.right")
                     .font(.title2.weight(.bold))

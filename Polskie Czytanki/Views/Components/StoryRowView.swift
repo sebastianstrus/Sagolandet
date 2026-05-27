@@ -1,6 +1,6 @@
 //
 //  StoryRowView.swift
-//  Світ Казок
+//  Sagolandet
 //
 
 import SwiftUI
@@ -98,7 +98,7 @@ struct StoryRowView: View {
             HStack(spacing: 6) {
                 Image(systemName: "checkmark.seal.fill")
                     .font(.footnote.weight(.bold))
-                Text("Завершено")
+                Text("Avslutad")
                     .font(.appCaption.weight(.bold))
             }
             .foregroundStyle(.white)
@@ -109,7 +109,7 @@ struct StoryRowView: View {
             HStack(spacing: 6) {
                 Image(systemName: "hand.tap.fill")
                     .font(.caption.weight(.bold))
-                Text("Натисни, щоб прочитати")
+                Text("Tryck för att läsa")
                     .font(.appCaption)
             }
             .foregroundStyle(.secondary)

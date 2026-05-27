@@ -1,6 +1,6 @@
 //
 //  ProgressStore.swift
-//  Світ Казок
+//  Sagolandet
 //
 
 import Foundation
