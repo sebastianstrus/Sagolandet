@@ -1,12 +1,12 @@
 //
-//  Polskie_CzytankiApp.swift
+//  SagolandetApp.swift
 //  Sagolandet
 //
 
 import SwiftUI
 
 @main
-struct Polskie_CzytankiApp: App {
+struct SagolandetApp: App {
     @State private var repository = StoryRepository()
     @State private var progress = ProgressStore()
     @State private var settings = SettingsStore()
