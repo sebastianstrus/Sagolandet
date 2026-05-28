@@ -16,7 +16,7 @@ enum StorePurchaseError: Error {
 
 @Observable
 final class StoreManager {
-    static let premiumProductID = "com.sebastianstrus.sagolandet.premium"
+    static let premiumProductID = "com.sebastianstrus.sagolandet.premiumplan"
     static let freeStoryLimit = 3
 
     private(set) var products: [Product] = []
